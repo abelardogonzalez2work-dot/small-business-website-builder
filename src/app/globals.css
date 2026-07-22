@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #171716;
+  --color-muted: #66645e;
+  --color-canvas: #f4f1ea;
+  --color-surface: #ffffff;
+  --color-border: #d9d5cc;
+  --color-focus: #1769e0;
+  --space-page: 1.25rem;
+  --content-width: 70rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-canvas);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  color: var(--color-surface);
+  background: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+.foundation-shell {
+  display: grid;
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
+  padding: var(--space-page);
+}
+
+.foundation-header,
+.foundation-footer {
+  display: flex;
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.foundation-header {
+  min-height: 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.wordmark {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.phase-label,
+.eyebrow,
+.foundation-footer {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.phase-label,
+.eyebrow {
+  font-weight: 700;
+}
+
+.foundation-content {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
+  align-self: center;
+  padding-block: 4rem;
+}
+
+.eyebrow {
+  margin: 0 0 1.25rem;
+}
+
+h1 {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  font-weight: 600;
+  line-height: 0.98;
+}
+
+.lede {
+  max-width: 34rem;
+  margin: 2rem 0 0;
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.foundation-footer {
+  min-height: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --space-page: 2rem;
+  }
+
+  .foundation-content {
+    padding-block: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
