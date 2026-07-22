@@ -76,11 +76,15 @@ The earlier Pagewell feature prototype is removed from the current working tree 
 
 Reason: the user requested an initial setup without the full application, and the prior prototype was created before the approved SB Page screen and delivery contracts were reviewed.
 
+### D-010 - Canonical GitHub repository
+
+Status: accepted
+
+Use `https://github.com/abelardogonzalez2work-dot/small-business-website-builder` as the canonical GitHub repository. The local `main` branch tracks `origin/main` over HTTPS.
+
+Reason: the repository owner confirmed this destination and authorized the local GitHub connection.
+
 ## Pending Explicit Approval
-
-### P-001 - GitHub repository remote
-
-The GitHub plugin is authenticated but currently returns no authorized repository. The exact repository URL or GitHub App repository permission must be confirmed before pushing.
 
 ### P-002 - Route naming and application-shell navigation
 

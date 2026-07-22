@@ -2,6 +2,22 @@
 
 All meaningful SB Page repository changes are recorded here.
 
+## 2026-07-21 - GitHub Repository Connected
+
+### Summary
+
+Connected the local project to the confirmed GitHub repository and pushed the foundation to `main`.
+
+### Systems affected
+
+- Git remote configuration
+- Repository decision documentation
+
+### Validation
+
+- Local `main` tracks `origin/main`.
+- Local and remote-tracking branches resolved to the same commit after the push.
+
 ## 2026-07-21 - Initial Project Foundation
 
 ### Summary
@@ -31,6 +47,5 @@ The user requested a clean production-quality starting point before any full app
 
 ### Known issues
 
-- The GitHub plugin currently returns no authorized repositories, so the remote destination is not yet confirmed.
 - The root route is a temporary foundation page, not a product screen.
 - No external service or production environment exists.
